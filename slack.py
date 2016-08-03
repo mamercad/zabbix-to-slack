@@ -17,7 +17,7 @@ try:
     GIT_REPO = 'https://github.com/mamercad/zabbix-to-slack'
 
     # logging knob
-    LOGGING = True
+    LOGGING = False
 
     # slack api endpoint
     SLACK_API = 'https://slack.com/api/chat.postMessage'
