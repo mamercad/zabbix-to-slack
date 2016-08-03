@@ -38,4 +38,14 @@ Zabbix alertscript that sends triggers to Slack. There are likely numerous of th
   * Use if severity: (up to you)
   * Enabled: `checked`
 
+5. Create an `Action` which reports triggers:
+  * Name: `Report problems to Slack`
+  * Default subject: `{TRIGGER.STATUS}: {TRIGGER.NAME}`
+  * Default message: `{TRIGGER.NAME}____{TRIGGER.STATUS}____{TRIGGER.SEVERITY}____{TRIGGER.URL}____{ITEM.NAME1} ({HOST.NAME1}:{ITEM.KEY1}): {ITEM.VALUE1}____{EVENT.ID}`
+    * `slack.py` parses this on `____`
+  * Recovery message: `checked`
+  * Recovery subject: `{TRIGGER.STATUS}: {TRIGGER.NAME}`
+  * Recovery message: `{TRIGGER.NAME}____{TRIGGER.STATUS}____{TRIGGER.SEVERITY}____{TRIGGER.URL}____{ITEM.NAME1} ({HOST.NAME1}:{ITEM.KEY1}): {ITEM.VALUE1}____{EVENT.ID}`
+  * Enabled: `checked`
+
 That should be it.
