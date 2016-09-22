@@ -1,4 +1,4 @@
-# Slack to Zabbix
+# Zabbix to Slack
 
 Zabbix alertscript that sends triggers to Slack. There are likely numerous of these in the wild, but this one is mine, and I prefer to use my own stuff sometimes.
 
